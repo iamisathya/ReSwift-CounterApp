@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CounterExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bn4-4h-m4t">
+                                <rect key="frame" x="132" y="244" width="150" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="tUf-oN-Y4O"/>
+                                    <constraint firstAttribute="width" constant="150" id="v5G-eK-NPJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" systemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Tf0-oG-hNS">
+                                <rect key="frame" x="57" y="369" width="300" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brm-gs-UDb">
+                                        <rect key="frame" x="0.0" y="0.0" width="94.5" height="50"/>
+                                        <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="downTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XNb-eg-J8F"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qty-pR-Uu3">
+                                        <rect key="frame" x="102.5" y="0.0" width="95" height="50"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wib-et-6da"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtN-AJ-bQe">
+                                        <rect key="frame" x="205.5" y="0.0" width="94.5" height="50"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="upTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DJF-91-qBb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3Tn-0T-sTT"/>
+                                    <constraint firstItem="YtN-AJ-bQe" firstAttribute="width" secondItem="Brm-gs-UDb" secondAttribute="width" id="7kO-l3-nLm"/>
+                                    <constraint firstAttribute="width" constant="300" id="95b-JA-Y8U"/>
+                                    <constraint firstItem="YtN-AJ-bQe" firstAttribute="height" secondItem="Brm-gs-UDb" secondAttribute="height" id="GQW-tp-Wpd"/>
+                                    <constraint firstItem="qty-pR-Uu3" firstAttribute="width" secondItem="Brm-gs-UDb" secondAttribute="width" id="R78-et-zbS"/>
+                                    <constraint firstItem="YtN-AJ-bQe" firstAttribute="leading" secondItem="qty-pR-Uu3" secondAttribute="trailing" constant="8" symbolic="YES" id="Z1D-YR-Mjo"/>
+                                    <constraint firstItem="qty-pR-Uu3" firstAttribute="height" secondItem="Brm-gs-UDb" secondAttribute="height" id="goB-B7-Nf3"/>
+                                    <constraint firstItem="qty-pR-Uu3" firstAttribute="leading" secondItem="Brm-gs-UDb" secondAttribute="trailing" constant="8" symbolic="YES" id="lon-2U-ybn"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tf0-oG-hNS" firstAttribute="top" secondItem="bn4-4h-m4t" secondAttribute="bottom" constant="50" id="Gjf-Sl-6bz"/>
+                            <constraint firstItem="Tf0-oG-hNS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ewe-TG-5o9"/>
+                            <constraint firstItem="bn4-4h-m4t" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="ndG-Qx-uKS"/>
+                            <constraint firstItem="bn4-4h-m4t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yHb-mW-Z5I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="bn4-4h-m4t" id="40e-W7-oEJ"/>
+                        <outlet property="decrementButton" destination="Brm-gs-UDb" id="8wZ-dx-kGs"/>
+                        <outlet property="incrementButton" destination="YtN-AJ-bQe" id="Xrp-bF-jhh"/>
+                        <outlet property="resetButton" destination="qty-pR-Uu3" id="T68-r1-NjA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.34782608695656" y="386.38392857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
